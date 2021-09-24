@@ -1,0 +1,41 @@
+.user-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: -25px;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+.user-box__link {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+  margin-left: 35px;
+  padding: 12px 0;
+
+  &:hover {
+    color: $light-brown;
+  }
+
+  &:focus {
+    outline: 2px solid $brown;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    margin: 0;
+    padding: 0;
+  }
+}

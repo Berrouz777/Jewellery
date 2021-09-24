@@ -1,0 +1,17 @@
+.sliders-pagination-mobile {
+  display: none;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+
+  @media (max-width: $tablet-breakpoint) {
+    display: block;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    bottom: 71px;
+    left: 0;
+  }
+}

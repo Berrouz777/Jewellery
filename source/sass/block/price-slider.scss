@@ -1,0 +1,128 @@
+.price-slider {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $black-dif;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 36px;
+  padding-top: 3px;
+
+  @media (max-width: $desktop-breakpoint) {
+    line-height: 21px;
+    font-size: 16px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 11px;
+    margin-top: 11px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 9px;
+  }
+}
+
+.price-slider label {
+  position: absolute;
+  top: 15px;
+  padding: 0;
+  font: inherit;
+}
+
+.price-slider input {
+  max-width: 30px;
+  font: inherit;
+}
+
+.price-slider label:hover,
+.price-slider label:focus {
+  outline: none;
+}
+
+.price-slider input:hover,
+.price-slider input:focus {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}
+
+
+.price-slider__line {
+  position: relative;
+  height: 1px;
+}
+
+.price-slider__line--low {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 26%;
+  background-color: $light-grey;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 17%;
+  }
+}
+
+.price-slider__line--low label {
+  right: -28px;
+}
+
+.price-slider__line--middle {
+  width: 100%;
+  background-color: $light-brown;
+}
+
+
+.price-slider__pin {
+  position: absolute;
+  top: -7px;
+  width: 16px;
+  height: 16px;
+  background-color: $light-brown;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.price-slider__pin--low {
+  left: -8px;
+
+  @media (max-width: $desktop-breakpoint) {
+    left: -9px;
+  }
+}
+
+.price-slider__pin--top {
+  right: -8px;
+  z-index: 3;
+
+  @media (max-width: $desktop-breakpoint) {
+    right: -9px;
+  }
+}
+
+.price-slider__line--top {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 21%;
+
+  background-color: $light-grey;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 24%;
+  }
+}
+
+.price-slider__line--top label {
+  left: -19px;
+
+  @media (max-width: $desktop-breakpoint) {
+    left: -19px;
+  }
+}

@@ -1,0 +1,32 @@
+.header-box h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 700;
+  color: $black-dif;
+  cursor: default;
+}
+
+.header-box a {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+  border-bottom: 1px solid $light-brown;
+  text-transform: capitalize;
+
+  &:hover {
+    color: $light-brown;
+    border-bottom: 1px dotted $light-brown;
+  }
+
+  &:focus {
+    outline: 2px solid $light-brown;
+    outline-offset: 3px;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

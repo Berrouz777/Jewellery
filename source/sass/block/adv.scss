@@ -1,0 +1,120 @@
+.adv {
+  position: relative;
+  background-color: $brown;
+  box-shadow: 0 4px 4px rgba($black, 0.25);
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba($brown, 0.7);
+  }
+}
+
+.adv__img-container {
+  width: 100%;
+  height: 463px;
+
+  &--catalog {
+    height: 261px;
+  }
+}
+
+.adv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adv__text-container {
+  position: absolute;
+  z-index: 1;
+  max-width: $desktop-max-width;
+  top: 182px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+
+  @media (max-width: $desktop-breakpoint) {
+    left: -12px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    left: 0;
+    top: 189px;
+  }
+
+  &--catalog {
+    top: 91px;
+    left: 5px;
+
+    @media (max-width: $tablet-breakpoint) {
+      top: 80px;
+      left: 0;
+      padding: 0 20px;
+    }
+  }
+}
+
+.adv__text-container h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 45px;
+  line-height: 58px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 -7px 0;
+  cursor: default;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 38px;
+    line-height: 49px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    color: $white;
+  }
+}
+
+.adv--catalog h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: $white;
+  margin: 0 0 4px 0;
+}
+
+.adv__text-container p {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 38px;
+  line-height: 49px;
+  font-style: italic;
+  font-weight: 400;
+  color: $white;
+  text-align: center;
+  text-transform: lowercase;
+  margin: 0 0 20px 0;
+  cursor: default;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+
+.adv--catalog p {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+  font-style: italic;
+  color: $white;
+  text-transform: none;
+}

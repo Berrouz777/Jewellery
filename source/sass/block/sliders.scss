@@ -1,0 +1,18 @@
+.sliders {
+  padding-bottom: 28px;
+  margin: 0 15px;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin: 0;
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-bottom: 90px;
+  }
+}
+
+.sliders__slide {
+  display: flex;
+  justify-content: center;
+}

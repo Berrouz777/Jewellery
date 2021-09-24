@@ -1,0 +1,35 @@
+.faq__wrapper {
+  padding: 30px 114px 40px 114px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 13px 0 20px 0;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 8px 0 10px 0;
+  }
+}
+
+.faq__head {
+  margin-bottom: 24px;
+  padding: 0 10px;
+  text-align: center;
+  overflow: hidden;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-bottom: 29px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-bottom: 10px;
+  }
+}
+
+.faq__head h2 {
+  letter-spacing: 1px;
+  margin: 0 0 24px 0;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin: 0 0 20px 0;
+  }
+}

@@ -1,0 +1,18 @@
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 48.8%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,132 @@
+.header {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $extra-light-grey;
+    top: 115px;
+
+    @media (max-width: $desktop-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 12px 10px 12px;
+
+  @media (max-width: $desktop-breakpoint) {
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 19px 0 20px 0;
+  }
+}
+
+.header__burger-menu {
+  display: none;
+  width: 25px;
+  height: 18px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: block;
+  }
+}
+
+.header__burger-menu--js svg {
+  @media (max-width: $desktop-breakpoint) {
+    display: block;
+    width: 25px;
+    height: 18px;
+    stroke: $black-dif;
+  }
+}
+
+.header__burger-menu--menu svg {
+  @media (max-width: $desktop-breakpoint) {
+    stroke: $white;
+  }
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 66px;
+    height: 66px;
+    fill: $light-brown;
+    stroke: $light-brown;
+
+    @media (max-width: $desktop-breakpoint) {
+      margin-left: -5px;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &--menu {
+    svg {
+      @media (max-width: $desktop-breakpoint) {
+        fill: $white;
+        stroke: $white;
+      }
+    }
+  }
+}
+
+.header--menu {
+  @media (max-width: $desktop-breakpoint) {
+    position: relative;
+    background-color: $light-brown;
+  }
+}
+
+.header button:focus,
+// .header input:hover,
+.header input:focus,
+.header a[href]:focus {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}
+
+.header button:hover,
+.header a[href]:hover {
+  color: $light-brown;
+}
+
+.header input:hover {
+  border-bottom: 1px solid $light-brown;
+}
+
+.header button:active,
+.header input:active,
+.header a[href]:active {
+  opacity: 0.6;
+}
+
+.header--menu button:hover,
+.header--menu button:focus,
+.header--menu input:hover,
+.header--menu input:focus,
+.header--menu a[href]:hover,
+.header--menu a[href]:focus {
+  @media (max-width: $desktop-breakpoint) {
+    color: $white;
+    outline: 2px solid $brown;
+    outline-offset: 2px;
+  }
+}

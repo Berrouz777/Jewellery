@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jewellery shop">
+  <title>Jewellery</title>
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-regular-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+  <body>
+    <header class="header header--menu">
+      <div class="header__wrapper header__wrapper--page">
+        <a href="index.html" class="header__logo header__logo--menu">
+          <svg width="66" height="66" role="img">
+            <use xlink:href="img/sprite_auto.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Filter-form Jewellery shop</h1>
+      <div class="filter filter--page">
+        <form class="filter__form" action="#" method="POST">
+          <fieldset class="filter__field filter-field">
+            <button class="filter-field__toggle" type="button" tabindex="1">
+              <span>Product</span>
+              <svg width="17" height="10" role="img">
+                <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+              </svg>
+            </button>
+            <div class="filter-field__point filter-point">
+              <div class="filter-point__input">
+                <input type="checkbox" id="necklaces" name="necklaces" tabindex="2">
+                <label for="necklaces">Necklaces</label>
+              </div>
+              <div class="filter-point__input">
+                <input type="checkbox" id="chokers" name="chokers" tabindex="3">
+                <label for="chokers">Chokers</label>
+              </div>
+              <div class="filter-point__input">
+                <input type="checkbox" id="rings" name="rings" tabindex="4">
+                <label for="rings">Rings</label>
+              </div>
+              <div class="filter-point__input">
+                <input type="checkbox" id="earrings" name="earrings" tabindex="5">
+                <label for="earrings">Earrings</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter__field filter-field">
+            <button class="filter-field__toggle" type="button" tabindex="6">
+              <span>Material</span>
+              <svg width="17" height="10" role="img">
+                <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+              </svg>
+            </button>
+            <div class="filter-field__point filter-point">
+              <div class="filter-point__input">
+                <input type="checkbox" id="silver" name="silver" tabindex="7">
+                <label for="silver">Silver</label>
+              </div>
+              <div class="filter-point__input">
+                <input type="checkbox" id="gold" name="gold" tabindex="8">
+                <label for="gold">Gold</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter__field filter-field">
+            <button class="filter-field__toggle" type="button" tabindex="9">
+              <span>Collection</span>
+              <svg width="17" height="10" role="img">
+                <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+              </svg>
+            </button>
+            <div class="filter-field__point filter-point">
+              <div class="filter-point__input">
+                <input type="checkbox" id="moonrise" name="moonrise" tabindex="10">
+                <label for="moonrise">MoonRise</label>
+              </div>
+              <div class="filter-point__input">
+                <input type="checkbox" id="sunrise" name="sunrise" tabindex="11">
+                <label for="sunrise">SunRise</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter__field filter-field">
+            <button class="filter-field__toggle" type="button" tabindex="12">
+              <span>Price</span>
+              <svg width="17" height="10" role="img">
+                <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+              </svg>
+            </button>
+            <div class="filter-field__point filter-point">
+              <div class="price-slider">
+                <div class="price-slider__line price-slider__line--low">
+                  <label for="low-price">$
+                    <input type="text" name="low-price" id="low-price" value="55" tabindex="13">
+                  </label>
+                </div>
+                <div class="price-slider__line price-slider__line--middle">
+                  <span class="price-slider__pin price-slider__pin--low"></span>
+                  <span class="price-slider__pin price-slider__pin--top"></span>
+                </div>
+                <div class="price-slider__line price-slider__line--top">
+                  <label for="top-price">$
+                    <input type="text" name="top-price" id="top-price" value="155" tabindex="14">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="filter__buttons">
+            <button class="filter__button filter__button--submit" type="submit" tabindex="15">Apply</button>
+            <button class="filter__button filter__button--reset" type="reset" tabindex="16">Clear All</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

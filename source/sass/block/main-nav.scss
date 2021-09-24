@@ -1,0 +1,37 @@
+.main-nav {
+  margin: 0;
+  padding: 0 30px 0 84px;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-bottom: 19px;
+    padding: 0;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-bottom: 9px;
+  }
+}
+
+.main-nav__item {
+  margin: 0 35px 10px 0;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin: 0 0 21px 0;
+  }
+}
+
+.main-nav__item a {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $black-dif;
+
+  @media (max-width: $desktop-breakpoint) {
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    color: $white;
+  }
+}

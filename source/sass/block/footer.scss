@@ -1,0 +1,39 @@
+.footer {
+  margin-top: auto;
+  background-color: $black;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 90px;
+  padding-bottom: 57px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding-top: 50px;
+    padding-bottom: 18px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-bottom: 37px;
+  }
+}
+
+.footer button:focus,
+.footer input:focus,
+.footer a[href]:focus {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}
+
+.footer button:hover,
+.footer a[href]:hover,
+.footer label:hover input::placeholder {
+  color: $light-brown;
+}
+
+.footer button:active,
+.footer input:active,
+.footer a[href]:active {
+  opacity: 0.6;
+}

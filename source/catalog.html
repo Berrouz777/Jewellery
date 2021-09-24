@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jewellery shop">
+  <title>Catalog Jewellery shop</title>
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-regular-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body">
+  <header class="header header--menu">
+    <div class="container">
+      <div class="header__wrapper">
+        <button class="header__burger-menu" type="button">
+          <svg width="25" height="18" role="img">
+            <use xlink:href="img/sprite_auto.svg#button-menu"></use>
+          </svg>
+        </button>
+        <form class="header__search search search--menu" action="#" method="POST">
+          <label for="search">
+            <svg class="search__icon" width="14" height="14" role="img">
+              <use xlink:href="img/sprite_auto.svg#search"></use>
+            </svg>
+          </label>
+          <input id="search" type="search" name="search" placeholder="Type here to search">
+        </form>
+        <a class="header__logo header__logo--menu" href="index.html">
+          <svg width="66" height="66" role="img">
+            <use xlink:href="img/sprite_auto.svg#logo"></use>
+          </svg>
+        </a>
+        <div class="header__user-box user-box">
+          <a class="user-box__link log log-js" href="login.html" target="_blank">Login</a>
+          <a class="user-box__link cart cart--menu" href="#">
+            <div>Cart&nbsp;
+              <span>0</span>
+            </div>
+            <svg width="20" height="18" role="img">
+              <use xlink:href="img/sprite_auto.svg#cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <nav class="header__nav nav nav--menu">
+        <ul class="nav__list main-nav">
+          <li class="main-nav__item">
+            <a href="#new">What’s new</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">Chokers</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">Necklaces</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">Rings</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">Earrings</a>
+          </li>
+        </ul>
+        <ul class="nav__list add-nav">
+          <li class="add-nav__item">
+            <a href="#">About CH</a>
+          </li>
+          <li class="add-nav__item">
+            <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+          </li>
+          <li class="add-nav__item">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="add-nav__item add-nav__item--login log-js">
+            <a href="login.html" target="_blank">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Catalog of Jewellery Shop.</h1>
+    <section class="adv adv--catalog">
+      <div class="adv__img-container adv__img-container--catalog">
+        <picture>
+          <!-- 1х: 1366px; 2x: 2732px -->
+          <source type="image/webp" media="(min-width: 1024px)"
+            srcset="img/catalog-adv_desk@1x.webp 1x, img/catalog-adv_desk@2x.webp 2x">
+          <!-- 1х: 768px; 2x: 1536px -->
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/catalog-adv_tab@1x.webp 1x, img/catalog-adv_tab@2x.webp 2x">
+          <!-- 1х: 320px; 2x: 640px -->
+          <source type="image/webp" srcset="img/catalog-adv_mob@1x.webp 1x, img/catalog-adv_mob@2x.webp 2x">
+          <!-- 1х: 1366px; 2x: 2732px -->
+          <img src="img/catalog-adv_desk@1x.jpg" srcset="img/catalog-adv_desk@2x.jpg 2x" width="1366" height="261"
+            alt="Золотые кольца.">
+        </picture>
+      </div>
+      <div class="adv__text-container adv__text-container--catalog">
+        <h2>All jewellery</h2>
+        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      </div>
+    </section>
+    <section class="catalog">
+      <h2 class="visually-hidden">Assortement</h2>
+      <div class="container">
+        <a class="catalog__filter-link" href="filter.html">Filter</a>
+      </div>
+      <div class="container catalog__wrapper">
+        <div class="filter">
+          <button class="filter__close" type="button" tabindex="1">
+            <svg width="32" height="32" role="img">
+              <use xlink:href="img/sprite_auto.svg#close-round"></use>
+            </svg>
+          </button>
+          <form class="filter__form" action="#" method="POST">
+            <fieldset class="filter__field filter-field">
+              <button class="filter-field__toggle" type="button" tabindex="1">
+                <span>Product</span>
+                <svg width="17" height="10" role="img">
+                  <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+                </svg>
+              </button>
+              <div class="filter-field__point filter-point">
+                <div class="filter-point__input">
+                  <input type="checkbox" id="necklaces" name="necklaces" tabindex="2">
+                  <label for="necklaces">Necklaces</label>
+                </div>
+                <div class="filter-point__input">
+                  <input type="checkbox" id="chokers" name="chokers" tabindex="3">
+                  <label for="chokers">Chokers</label>
+                </div>
+                <div class="filter-point__input">
+                  <input type="checkbox" id="rings" name="rings" tabindex="4">
+                  <label for="rings">Rings</label>
+                </div>
+                <div class="filter-point__input">
+                  <input type="checkbox" id="earrings" name="earrings" tabindex="5">
+                  <label for="earrings">Earrings</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter__field filter-field">
+              <button class="filter-field__toggle" type="button" tabindex="6">
+                <span>Material</span>
+                <svg width="17" height="10" role="img">
+                  <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+                </svg>
+              </button>
+              <div class="filter-field__point filter-point">
+                <div class="filter-point__input">
+                  <input type="checkbox" id="silver" name="silver" tabindex="7">
+                  <label for="silver">Silver</label>
+                </div>
+                <div class="filter-point__input">
+                  <input type="checkbox" id="gold" name="gold" tabindex="8">
+                  <label for="gold">Gold</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter__field filter-field">
+              <button class="filter-field__toggle" type="button" tabindex="9">
+                <span>Collection</span>
+                <svg width="17" height="10" role="img">
+                  <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+                </svg>
+              </button>
+              <div class="filter-field__point filter-point">
+                <div class="filter-point__input">
+                  <input type="checkbox" id="moonrise" name="moonrise" tabindex="10">
+                  <label for="moonrise">MoonRise</label>
+                </div>
+                <div class="filter-point__input">
+                  <input type="checkbox" id="sunrise" name="sunrise" tabindex="11">
+                  <label for="sunrise">SunRise</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter__field filter-field">
+              <button class="filter-field__toggle" type="button" tabindex="12">
+                <span>Price</span>
+                <svg width="17" height="10" role="img">
+                  <use xlink:href="img/sprite_auto.svg#chevron_up"></use>
+                </svg>
+              </button>
+              <div class="filter-field__point filter-point">
+                <div class="price-slider">
+                  <div class="price-slider__line price-slider__line--low">
+                    <label for="low-price">$
+                      <input type="text" name="low-price" id="low-price" value="55" tabindex="13">
+                    </label>
+                  </div>
+                  <div class="price-slider__line price-slider__line--middle">
+                    <span class="price-slider__pin price-slider__pin--low"></span>
+                    <span class="price-slider__pin price-slider__pin--top"></span>
+                  </div>
+                  <div class="price-slider__line price-slider__line--top">
+                    <label for="top-price">$
+                      <input type="text" name="top-price" id="top-price" value="155" tabindex="14">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="filter__buttons">
+              <button class="filter__button filter__button--submit" type="submit" tabindex="15">Apply</button>
+              <button class="filter__button filter__button--reset" type="reset" tabindex="16">Clear All</button>
+            </div>
+          </form>
+        </div>
+        <div class="catalog__sliders-container">
+          <div class="swiper catalog__sliders">
+            <div class="swiper-wrapper">
+              <div class="catalog__sliders-page sliders-page swiper-slide">
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_double-pearl-earrings_desk@1x.jpg"
+                      srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Double pearl earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/choker-with-gold-bead_desk@1x.webp 1x, img/choker-with-gold-bead_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/choker-with-gold-bead_tab@1x.webp 1x, img/choker-with-gold-bead_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/choker-with-gold-bead_mob@1x.webp 1x, img/choker-with-gold-bead_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/choker-with-gold-bead_desk@1x.jpg"
+                      srcset="img/choker-with-gold-bead_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Choker with gold bead</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>55</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_gold-layered-necklace_tab@1x.webp 1x, img/cat_gold-layered-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_gold-layered-necklace_mob@1x.webp 1x, img/cat_gold-layered-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_gold-layered-necklace_desk@1x.jpg"
+                      srcset="cat_gold-layered-necklace_desk@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold layered necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>155</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_blue-gemstone-pendant_tab@1x.webp 1x, img/cat_blue-gemstone-pendant_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_blue-gemstone-pendant_mob@1x.webp 1x, img/cat_blue-gemstone-pendant_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_blue-gemstone-pendant_desk@1x.jpg"
+                      srcset="img/cat_blue-gemstone-pendant_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Blue gemstone pendant</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_boho-earrings_tab@1x.webp 1x, img/cat_boho-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_boho-earrings_mob@1x.webp 1x, img/cat_boho-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_boho-earrings_desk@1x.jpg" srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Boho earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>75</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_bird-necklace_tab@1x.webp 1x, img/cat_bird-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_bird-necklace_mob@1x.webp 1x, img/cat_bird-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_bird-necklace_desk@1x.jpg" srcset="img/cat_bird-necklace_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold bird necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>135</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/black-leather-choker_desk@1x.webp 1x, img/black-leather-choker_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/black-leather-choker_tab@1x.webp 1x, img/black-leather-choker_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/black-leather-choker_mob@1x.webp 1x, img/black-leather-choker_mob@2x.webp 2x">
+
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/black-leather-choker_desk@1x.jpg"
+                      srcset="img/black-leather-choker_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Black leather choker</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>85</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_purple-gemstone-necklace_tab@1x.webp 1x, img/cat_purple-gemstone-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_purple-gemstone-necklace_mob@1x.webp 1x, img/cat_purple-gemstone-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_purple-gemstone-necklace_desk@1x.jpg"
+                      srcset="img/cat_purple-gemstone-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>145</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_elephant-earrings_tab@1x.webp 1x, img/cat_elephant-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_elephant-earrings_mob@1x.webp 1x, img/cat_elephant-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_elephant-earrings_desk@1x.jpg" srcset="img/cat_elephant-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Elephant earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_threader-necklace-closeup_tab@1x.webp 1x, img/cat_threader-necklace-closeup_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_threader-necklace-closeup_mob@1x.webp 1x, img/cat_threader-necklace-closeup_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_threader-necklace-closeup_desk@1x.jpg"
+                      srcset="img/cat_threader-necklace-closeup_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Threader necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_origami-crane-necklace_tab@1x.webp 1x, img/cat_origami-crane-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_origami-crane-necklace_mob@1x.webp 1x, img/cat_origami-crane-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_origami-crane-necklace_desk@1x.jpg"
+                      srcset="img/cat_origami-crane-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Origami crane necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_marble-earrings_tab@1x.webp 1x, img/cat_marble-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_marble-earrings_mob@1x.webp 1x, img/cat_marble-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_marble-earrings_desk@1x.jpg" srcset="img/cat_marble-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Marble earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+              </div>
+              <div class="catalog__sliders-page sliders-page swiper-slide">
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_double-pearl-earrings_desk@1x.jpg"
+                      srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Double pearl earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/choker-with-gold-bead_desk@1x.webp 1x, img/choker-with-gold-bead_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/choker-with-gold-bead_tab@1x.webp 1x, img/choker-with-gold-bead_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/choker-with-gold-bead_mob@1x.webp 1x, img/choker-with-gold-bead_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/choker-with-gold-bead_desk@1x.jpg"
+                      srcset="img/choker-with-gold-bead_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Choker with gold bead</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>55</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_gold-layered-necklace_tab@1x.webp 1x, img/cat_gold-layered-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_gold-layered-necklace_mob@1x.webp 1x, img/cat_gold-layered-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_gold-layered-necklace_desk@1x.jpg"
+                      srcset="cat_gold-layered-necklace_desk@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold layered necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>155</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_blue-gemstone-pendant_tab@1x.webp 1x, img/cat_blue-gemstone-pendant_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_blue-gemstone-pendant_mob@1x.webp 1x, img/cat_blue-gemstone-pendant_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_blue-gemstone-pendant_desk@1x.jpg"
+                      srcset="img/cat_blue-gemstone-pendant_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Blue gemstone pendant</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_boho-earrings_tab@1x.webp 1x, img/cat_boho-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_boho-earrings_mob@1x.webp 1x, img/cat_boho-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_boho-earrings_desk@1x.jpg" srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Boho earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>75</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_bird-necklace_tab@1x.webp 1x, img/cat_bird-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_bird-necklace_mob@1x.webp 1x, img/cat_bird-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_bird-necklace_desk@1x.jpg" srcset="img/cat_bird-necklace_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold bird necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>135</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/black-leather-choker_desk@1x.webp 1x, img/black-leather-choker_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/black-leather-choker_tab@1x.webp 1x, img/black-leather-choker_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/black-leather-choker_mob@1x.webp 1x, img/black-leather-choker_mob@2x.webp 2x">
+
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/black-leather-choker_desk@1x.jpg"
+                      srcset="img/black-leather-choker_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Black leather choker</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>85</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_purple-gemstone-necklace_tab@1x.webp 1x, img/cat_purple-gemstone-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_purple-gemstone-necklace_mob@1x.webp 1x, img/cat_purple-gemstone-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_purple-gemstone-necklace_desk@1x.jpg"
+                      srcset="img/cat_purple-gemstone-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>145</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_elephant-earrings_tab@1x.webp 1x, img/cat_elephant-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_elephant-earrings_mob@1x.webp 1x, img/cat_elephant-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_elephant-earrings_desk@1x.jpg" srcset="img/cat_elephant-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Elephant earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_threader-necklace-closeup_tab@1x.webp 1x, img/cat_threader-necklace-closeup_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_threader-necklace-closeup_mob@1x.webp 1x, img/cat_threader-necklace-closeup_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_threader-necklace-closeup_desk@1x.jpg"
+                      srcset="img/cat_threader-necklace-closeup_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Threader necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_origami-crane-necklace_tab@1x.webp 1x, img/cat_origami-crane-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_origami-crane-necklace_mob@1x.webp 1x, img/cat_origami-crane-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_origami-crane-necklace_desk@1x.jpg"
+                      srcset="img/cat_origami-crane-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Origami crane necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_marble-earrings_tab@1x.webp 1x, img/cat_marble-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_marble-earrings_mob@1x.webp 1x, img/cat_marble-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_marble-earrings_desk@1x.jpg" srcset="img/cat_marble-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Marble earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+              </div>
+              <div class="catalog__sliders-page sliders-page swiper-slide">
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_double-pearl-earrings_desk@1x.jpg"
+                      srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Double pearl earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/choker-with-gold-bead_desk@1x.webp 1x, img/choker-with-gold-bead_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/choker-with-gold-bead_tab@1x.webp 1x, img/choker-with-gold-bead_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/choker-with-gold-bead_mob@1x.webp 1x, img/choker-with-gold-bead_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/choker-with-gold-bead_desk@1x.jpg"
+                      srcset="img/choker-with-gold-bead_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Choker with gold bead</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>55</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_gold-layered-necklace_tab@1x.webp 1x, img/cat_gold-layered-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_gold-layered-necklace_mob@1x.webp 1x, img/cat_gold-layered-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_gold-layered-necklace_desk@1x.jpg"
+                      srcset="cat_gold-layered-necklace_desk@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold layered necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>155</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_blue-gemstone-pendant_tab@1x.webp 1x, img/cat_blue-gemstone-pendant_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_blue-gemstone-pendant_mob@1x.webp 1x, img/cat_blue-gemstone-pendant_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_blue-gemstone-pendant_desk@1x.jpg"
+                      srcset="img/cat_blue-gemstone-pendant_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Blue gemstone pendant</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_boho-earrings_tab@1x.webp 1x, img/cat_boho-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_boho-earrings_mob@1x.webp 1x, img/cat_boho-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_boho-earrings_desk@1x.jpg" srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Boho earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>75</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_bird-necklace_tab@1x.webp 1x, img/cat_bird-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_bird-necklace_mob@1x.webp 1x, img/cat_bird-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_bird-necklace_desk@1x.jpg" srcset="img/cat_bird-necklace_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold bird necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>135</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/black-leather-choker_desk@1x.webp 1x, img/black-leather-choker_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/black-leather-choker_tab@1x.webp 1x, img/black-leather-choker_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/black-leather-choker_mob@1x.webp 1x, img/black-leather-choker_mob@2x.webp 2x">
+
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/black-leather-choker_desk@1x.jpg"
+                      srcset="img/black-leather-choker_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Black leather choker</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>85</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_purple-gemstone-necklace_tab@1x.webp 1x, img/cat_purple-gemstone-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_purple-gemstone-necklace_mob@1x.webp 1x, img/cat_purple-gemstone-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_purple-gemstone-necklace_desk@1x.jpg"
+                      srcset="img/cat_purple-gemstone-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>145</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_elephant-earrings_tab@1x.webp 1x, img/cat_elephant-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_elephant-earrings_mob@1x.webp 1x, img/cat_elephant-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_elephant-earrings_desk@1x.jpg" srcset="img/cat_elephant-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Elephant earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_threader-necklace-closeup_tab@1x.webp 1x, img/cat_threader-necklace-closeup_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_threader-necklace-closeup_mob@1x.webp 1x, img/cat_threader-necklace-closeup_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_threader-necklace-closeup_desk@1x.jpg"
+                      srcset="img/cat_threader-necklace-closeup_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Threader necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_origami-crane-necklace_tab@1x.webp 1x, img/cat_origami-crane-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_origami-crane-necklace_mob@1x.webp 1x, img/cat_origami-crane-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_origami-crane-necklace_desk@1x.jpg"
+                      srcset="img/cat_origami-crane-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Origami crane necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_marble-earrings_tab@1x.webp 1x, img/cat_marble-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_marble-earrings_mob@1x.webp 1x, img/cat_marble-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_marble-earrings_desk@1x.jpg" srcset="img/cat_marble-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Marble earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+              </div>
+              <div class="catalog__sliders-page sliders-page swiper-slide">
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_double-pearl-earrings_desk@1x.jpg"
+                      srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Double pearl earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/choker-with-gold-bead_desk@1x.webp 1x, img/choker-with-gold-bead_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/choker-with-gold-bead_tab@1x.webp 1x, img/choker-with-gold-bead_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/choker-with-gold-bead_mob@1x.webp 1x, img/choker-with-gold-bead_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/choker-with-gold-bead_desk@1x.jpg"
+                      srcset="img/choker-with-gold-bead_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Choker with gold bead</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>55</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_gold-layered-necklace_tab@1x.webp 1x, img/cat_gold-layered-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_gold-layered-necklace_mob@1x.webp 1x, img/cat_gold-layered-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_gold-layered-necklace_desk@1x.jpg"
+                      srcset="cat_gold-layered-necklace_desk@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold layered necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>155</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_blue-gemstone-pendant_tab@1x.webp 1x, img/cat_blue-gemstone-pendant_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_blue-gemstone-pendant_mob@1x.webp 1x, img/cat_blue-gemstone-pendant_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_blue-gemstone-pendant_desk@1x.jpg"
+                      srcset="img/cat_blue-gemstone-pendant_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Blue gemstone pendant</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_boho-earrings_tab@1x.webp 1x, img/cat_boho-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_boho-earrings_mob@1x.webp 1x, img/cat_boho-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_boho-earrings_desk@1x.jpg" srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Boho earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>75</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_bird-necklace_tab@1x.webp 1x, img/cat_bird-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_bird-necklace_mob@1x.webp 1x, img/cat_bird-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_bird-necklace_desk@1x.jpg" srcset="img/cat_bird-necklace_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold bird necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>135</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/black-leather-choker_desk@1x.webp 1x, img/black-leather-choker_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/black-leather-choker_tab@1x.webp 1x, img/black-leather-choker_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/black-leather-choker_mob@1x.webp 1x, img/black-leather-choker_mob@2x.webp 2x">
+
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/black-leather-choker_desk@1x.jpg"
+                      srcset="img/black-leather-choker_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Black leather choker</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>85</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_purple-gemstone-necklace_tab@1x.webp 1x, img/cat_purple-gemstone-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_purple-gemstone-necklace_mob@1x.webp 1x, img/cat_purple-gemstone-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_purple-gemstone-necklace_desk@1x.jpg"
+                      srcset="img/cat_purple-gemstone-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>145</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_elephant-earrings_tab@1x.webp 1x, img/cat_elephant-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_elephant-earrings_mob@1x.webp 1x, img/cat_elephant-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_elephant-earrings_desk@1x.jpg" srcset="img/cat_elephant-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Elephant earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_threader-necklace-closeup_tab@1x.webp 1x, img/cat_threader-necklace-closeup_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_threader-necklace-closeup_mob@1x.webp 1x, img/cat_threader-necklace-closeup_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_threader-necklace-closeup_desk@1x.jpg"
+                      srcset="img/cat_threader-necklace-closeup_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Threader necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_origami-crane-necklace_tab@1x.webp 1x, img/cat_origami-crane-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_origami-crane-necklace_mob@1x.webp 1x, img/cat_origami-crane-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_origami-crane-necklace_desk@1x.jpg"
+                      srcset="img/cat_origami-crane-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Origami crane necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_marble-earrings_tab@1x.webp 1x, img/cat_marble-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_marble-earrings_mob@1x.webp 1x, img/cat_marble-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_marble-earrings_desk@1x.jpg" srcset="img/cat_marble-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Marble earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+              </div>
+              <div class="catalog__sliders-page sliders-page swiper-slide">
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_double-pearl-earrings_desk@1x.jpg"
+                      srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Double pearl earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/choker-with-gold-bead_desk@1x.webp 1x, img/choker-with-gold-bead_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/choker-with-gold-bead_tab@1x.webp 1x, img/choker-with-gold-bead_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/choker-with-gold-bead_mob@1x.webp 1x, img/choker-with-gold-bead_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/choker-with-gold-bead_desk@1x.jpg"
+                      srcset="img/choker-with-gold-bead_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Choker with gold bead</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>55</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_gold-layered-necklace_desk@1x.webp 1x, img/cat_gold-layered-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_gold-layered-necklace_tab@1x.webp 1x, img/cat_gold-layered-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_gold-layered-necklace_mob@1x.webp 1x, img/cat_gold-layered-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_gold-layered-necklace_desk@1x.jpg"
+                      srcset="cat_gold-layered-necklace_desk@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold layered necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>155</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_blue-gemstone-pendant_desk@1x.webp 1x, img/cat_blue-gemstone-pendant_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_blue-gemstone-pendant_tab@1x.webp 1x, img/cat_blue-gemstone-pendant_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_blue-gemstone-pendant_mob@1x.webp 1x, img/cat_blue-gemstone-pendant_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_blue-gemstone-pendant_desk@1x.jpg"
+                      srcset="img/cat_blue-gemstone-pendant_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Blue gemstone pendant</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_boho-earrings_desk@1x.webp 1x, img/cat_boho-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_boho-earrings_tab@1x.webp 1x, img/cat_boho-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_boho-earrings_mob@1x.webp 1x, img/cat_boho-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_boho-earrings_desk@1x.jpg" srcset="img/cat_double-pearl-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Boho earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>75</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_bird-necklace_desk@1x.webp 1x, img/cat_bird-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_bird-necklace_tab@1x.webp 1x, img/cat_bird-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_bird-necklace_mob@1x.webp 1x, img/cat_bird-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_bird-necklace_desk@1x.jpg" srcset="img/cat_bird-necklace_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Gold bird necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>135</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/black-leather-choker_desk@1x.webp 1x, img/black-leather-choker_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/black-leather-choker_tab@1x.webp 1x, img/black-leather-choker_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/black-leather-choker_mob@1x.webp 1x, img/black-leather-choker_mob@2x.webp 2x">
+
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/black-leather-choker_desk@1x.jpg"
+                      srcset="img/black-leather-choker_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Black leather choker</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>85</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_purple-gemstone-necklace_desk@1x.webp 1x, img/cat_purple-gemstone-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_purple-gemstone-necklace_tab@1x.webp 1x, img/cat_purple-gemstone-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_purple-gemstone-necklace_mob@1x.webp 1x, img/cat_purple-gemstone-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_purple-gemstone-necklace_desk@1x.jpg"
+                      srcset="img/cat_purple-gemstone-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>145</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_elephant-earrings_desk@1x.webp 1x, img/cat_elephant-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_elephant-earrings_tab@1x.webp 1x, img/cat_elephant-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_elephant-earrings_mob@1x.webp 1x, img/cat_elephant-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_elephant-earrings_desk@1x.jpg" srcset="img/cat_elephant-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Elephant earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_threader-necklace-closeup_desk@1x.webp 1x, img/cat_threader-necklace-closeup_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_threader-necklace-closeup_tab@1x.webp 1x, img/cat_threader-necklace-closeup_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_threader-necklace-closeup_mob@1x.webp 1x, img/cat_threader-necklace-closeup_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_threader-necklace-closeup_desk@1x.jpg"
+                      srcset="img/cat_threader-necklace-closeup_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Threader necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>115</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_origami-crane-necklace_desk@1x.webp 1x, img/cat_origami-crane-necklace_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_origami-crane-necklace_tab@1x.webp 1x, img/cat_origami-crane-necklace_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_origami-crane-necklace_mob@1x.webp 1x, img/cat_origami-crane-necklace_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_origami-crane-necklace_desk@1x.jpg"
+                      srcset="img/cat_origami-crane-necklace_desk@2x.jpg 2x" width="270" height="272"
+                      alt="Jewellery item">
+                  </picture>
+                  <h3>Origami crane necklace</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>105</span>
+                  </p>
+                </a>
+                <a href="#" class="sliders-item sliders-page__item">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source type="image/webp" media="(min-width: 1024px)"
+                      srcset="img/cat_marble-earrings_desk@1x.webp 1x, img/cat_marble-earrings_desk@2x.webp 2x">
+                    <!-- 1х: 206px; 2x: 412px -->
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/cat_marble-earrings_tab@1x.webp 1x, img/cat_marble-earrings_tab@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source type="image/webp"
+                      srcset="img/cat_marble-earrings_mob@1x.webp 1x, img/cat_marble-earrings_mob@2x.webp 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/cat_marble-earrings_desk@1x.jpg" srcset="img/cat_marble-earrings_desk@2x.jpg 2x"
+                      width="270" height="272" alt="Jewellery item">
+                  </picture>
+                  <h3>Marble earrings</h3>
+                  <p class="sliders-item__pricebox">
+                    <span>&#36; </span>
+                    <span>95</span>
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__sliders-navigation catalog-sliders-navigation">
+            <button class="catalog-sliders-navigation__button catalog-sliders-navigation__button--prev" aria-label="Previous">Previous</button>
+            <div class="sliders-pagination catalog-sliders-navigation__pagination"></div>
+            <button class="catalog-sliders-navigation__button catalog-sliders-navigation__button--next" aria-label="Next">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <section class="mailing">
+        <h2 class="mailing__title">The good stuff in your inbox</h2>
+        <p class="mailing__text">News and updates from CH. No spam, we promise.</p>
+        <form class="mailing__form" action="#" method="POST">
+          <label for="email">
+            <input type="email" name="email" id="email" placeholder="Your E-mail" required>
+          </label>
+          <button class="mailing__button" type="submit">Sign Up
+            <svg class="mailing__button-icon" width="37" height="17">
+              <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </form>
+      </section>
+      <section class="informations">
+        <h2 class="visually-hidden">Informations about Shop</h2>
+        <ul class="informations__list">
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">Ordering&nbsp;&#38;&nbsp;Payment</a>
+          </li>
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">Terms&nbsp;&#38;&nbsp;Conditions</a>
+          </li>
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">Returns&nbsp;&#38;&nbsp;Exchanges</a>
+          </li>
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">Delivery</a>
+          </li>
+        </ul>
+        <ul class="informations__list">
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">About CH</a>
+          </li>
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+          </li>
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">Jobs</a>
+          </li>
+          <li class="informations__item">
+            <a class="informations__item-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </section>
+      <ul class="socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <div class="socials__icon socials__icon-fb">
+              <svg width="8" height="15" role="img">
+                <use xlink:href="img/sprite_auto.svg#facebook"></use>
+              </svg>
+            </div>
+            <span class="socials__text">Facebook</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <div class="socials__icon socials__icon-in">
+              <svg width="15" height="15" role="img">
+                <use xlink:href="img/sprite_auto.svg#instagram"></use>
+              </svg>
+            </div>
+            <span class="socials__text">Instagram</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <div class="socials__icon socials__icon-pn">
+              <svg width="16" height="15" role="img">
+                <use xlink:href="img/sprite_auto.svg#pinterest"></use>
+              </svg>
+            </div>
+            <span class="socials__text">Pinterest</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <div class="socials__icon socials__icon-tw">
+              <svg width="15" height="13" role="img">
+                <use xlink:href="img/sprite_auto.svg#twitter"></use>
+              </svg>
+            </div>
+            <span class="socials__text">Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="modal">
+    <div class="login">
+      <div class="login__img">
+        <picture>
+          <!-- 1х: 430px; 2x: 860px -->
+          <source type="image/webp" media="(min-width: 1024px)" srcset="img/ice-cream_desk@1x.webp 1x, img/ice-cream_desk@2x.webp 2x">
+          <!-- 1х: 442px; 2x: 884px -->
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/ice-cream_tab@1x.webp 1x, img/ice-cream_tab@2x.webp 2x">
+          <!-- 1х: 270px; 2x: 540px -->
+          <source type="image/webp" srcset="img/ice-cream_mob@1x.webp 1x, img/ice-cream_mob@2x.webp 2x">
+          <!-- 1х: 430px; 2x: 860px -->
+          <img src="img/ice-cream_desk@1x.jpg" srcset="img/ice-cream_desk@2x.jpg 2x" width="430" height="138" alt="Серёжки.">
+        </picture>
+      </div>
+      <div class="login__form-wrapper">
+        <h2>Log in</h2>
+        <form class="login__form" action="#" method="post">
+          <label for="useremail">
+            <input type="email" id="useremail" name="useremail" placeholder="Your E-mail" aria-label="Input your e-mail" required>
+          </label>
+          <label for="userpassword">
+            <input type="password" id="userpassword" name="userpassword" placeholder="Password" aria-label="Input your password" required>
+          </label>
+          <a href="#" class="login__restore-link">Forgot your password?</a>
+          <button class="login__btn" type="submit">Log In</button>
+        </form>
+        <a class="login__signup-link" href="#">Don’t have an account?<span>&nbsp;&nbsp;Sign up</span></a>
+      </div>
+      <button class="login__close" type="button" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14" role="img">
+          <use xlink:href="img/sprite_auto.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/vendor/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+.filter {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  width: 250px;
+  background-color: $white;
+  margin-left: 30px;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: none;
+    width: 423px;
+    margin-left: 0;
+    padding-bottom: 38px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 270px;
+    padding-bottom: 28px;
+  }
+}
+
+.filter__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__close {
+  display: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: block;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    top: -17px;
+    right: -10px;
+  }
+}
+
+.filter__close svg {
+  width: 32px;
+  height: 32px;
+  fill: $white;
+  cursor: pointer;
+}
+
+.filter__buttons {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 0 20px;
+  }
+}
+
+.filter__button {
+  padding: 24px 25px;
+}
+
+.filter__button--submit {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $white;
+  background-color: $light-brown;
+  margin-top: 34px;
+  border: none;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-top: 38px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 28px;
+  }
+}
+
+.filter__button--submit:hover,
+.filter__button--submit:focus {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}
+
+.filter__button--submit:active {
+  opacity: 0.6;
+}
+
+.filter__button--reset {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+  background-color: transparent;
+  margin-top: 23px;
+  border: 1px solid $light-brown;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 19px;
+  }
+}
+
+.filter__button--reset:hover,
+.filter__button--reset:focus {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}
+
+.filter__button--reset:active {
+  opacity: 0.6;
+}
+
+.filter button {
+  cursor: pointer;
+}
+
+.filter--opened {
+  @media (max-width: $desktop-breakpoint) {
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 4px 4px rgba($black, 0.25));
+  }
+}
+
+.filter--page {
+  display: none;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 4px rgba($black, 0.25));
+  }
+}

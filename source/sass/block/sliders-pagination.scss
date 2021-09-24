@@ -1,0 +1,23 @@
+.sliders-pagination {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media (max-width: $desktop-breakpoint) {
+    bottom: 50px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    display: none;
+  }
+}
+
+.sliders-pagination .swiper-pagination-bullet {
+  padding: 0 3px;
+}

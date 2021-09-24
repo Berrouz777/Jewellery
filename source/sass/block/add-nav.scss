@@ -1,0 +1,25 @@
+.add-nav {
+  display: none;
+  margin: 0;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: flex;
+    padding: 0;
+  }
+}
+
+.add-nav__item {
+  @media (max-width: $desktop-breakpoint) {
+    margin: 0 0 20px 0;
+  }
+}
+
+.add-nav__item a {
+  @media (max-width: $desktop-breakpoint) {
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+    color: rgba($color: $white, $alpha: 0.75);
+  }
+}

@@ -1,0 +1,115 @@
+.mailing {
+  width: 42%;
+  padding: 0 84px 0 15px;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 100%;
+    padding: 0 0 40px 0;
+  }
+}
+
+.mailing__title {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: $white;
+  margin: 0 0 9px 0;
+  padding: 0;
+  cursor: default;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 0 0 13px 0;
+    padding-right: 50px;
+  }
+}
+
+.mailing__text {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: $dark-grey;
+  margin: 0 0 34px 0;
+  padding: 0;
+  cursor: default;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-right: 50px;
+  }
+}
+
+.mailing__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid $white;
+
+  @media (max-width: $desktop-breakpoint) {
+    max-width: 560px;
+    padding: 3px 0;
+  }
+}
+
+.mailing__form label {
+  width: 70%;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 60%;
+  }
+}
+
+.mailing__form input {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  width: 100%;
+  padding: 5px 0;
+  background-color: transparent;
+  color: $dark-grey;
+  border: none;
+
+  &::placeholder {
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: $dark-grey;
+  }
+}
+
+.mailing__button {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  color: $white;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      transform: translateX(5px);
+      transition-duration: 0.3s;
+    }
+  }
+
+  &-icon {
+    width: 30px;
+    stroke: $white;
+    height: 17px;
+    margin-left: 12px;
+  }
+}

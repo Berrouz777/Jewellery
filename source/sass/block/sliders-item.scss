@@ -1,0 +1,73 @@
+.sliders-item {
+  width: 270px;
+  padding-bottom: 4px;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 324px;
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 130px;
+    padding-top: 5px;
+  }
+}
+
+.sliders-item img {
+  width: 270px;
+  height: 287px;
+  margin-bottom: 17px;
+  object-fit: cover;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 324px;
+    height: 340px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 130px;
+    height: 136px;
+    margin-bottom: 12px;
+  }
+}
+
+.sliders-item h3 {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+  text-align: center;
+  margin: 3px 0 7px 0;
+
+  @media (max-width: $desktop-breakpoint) {
+    margin: 0 0 7px 0;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 0 0 7px 0;
+  }
+}
+
+.sliders-item:focus,
+.sliders-item:hover {
+  outline: 2px solid $light-brown;
+  outline-offset: -0.5 * 4px;
+}
+
+.sliders-item__pricebox {
+  text-align: center;
+  margin: 0 0 20px 0;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 0 0 5px 0;
+  }
+}
+
+.sliders-item__pricebox span {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $black-dif;
+}

@@ -1,0 +1,5 @@
+.log {
+  @media (max-width: $desktop-breakpoint) {
+    display: none;
+  }
+}

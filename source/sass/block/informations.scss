@@ -1,0 +1,39 @@
+.informations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 36.7%;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 66.5%;
+    justify-content: space-between;
+    margin-right: 4px;
+  }
+}
+
+.informations__list {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 6px 7px;
+  width: 190px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 6px 7px 6px 0;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 0 0 7px 0;
+  }
+}
+
+.informations__item {
+  margin-bottom: 21px;
+
+  &-link {
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $white;
+  }
+}

@@ -1,0 +1,223 @@
+.login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 430px;
+  background-color: $light-grey;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 442px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 270px;
+  }
+}
+
+.login--page {
+  top: 430px;
+
+  @media (max-width: $tablet-breakpoint) {
+    top: 330px;
+  }
+}
+
+.login__img {
+  width: 430px;
+  height: 138px;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 442px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 270px;
+    height: 84px;
+  }
+}
+
+.login h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 700;
+  color: $black-dif;
+  text-align: center;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  margin: 0 0 25px 0;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 18px;
+  }
+}
+
+.login__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 49px 45px 55px 45px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 49px 51px 55px 51px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 37px 15px 41px 15px;
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form input {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+  width: 100%;
+  padding: 8px 0 8px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $black-dif;
+  border-radius: 0;
+
+  &::placeholder {
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    color: $dark-grey;
+  }
+}
+
+.login__form label {
+  margin-bottom: 28px;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-bottom: 22px;
+  }
+}
+
+.login__btn {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black;
+  background-color: $light-brown;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 14px;
+  padding: 24px 20px 23px 20px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 30px;
+  }
+}
+
+.login__form label[for="userpassword"] {
+  margin-bottom: 0;
+}
+
+.login__restore-link {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $dark-grey;
+  align-self: flex-end;
+  padding: 5px 0;
+}
+
+.login__signup-link {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.login__signup-link span {
+  color: $black-dif;
+}
+
+.login__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: $tablet-breakpoint) {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.login__close svg {
+  fill: $black-dif;
+  width: 14px;
+  height: 14px;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.login__close:hover svg,
+.login__close:focus svg {
+  fill: $light-brown;
+}
+
+.login__close:focus svg {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}
+
+.login__signup-link:hover span,
+.login__restore-link:hover {
+  color: $light-brown;
+}
+
+.login input:hover {
+  border-color: $light-brown;
+}
+
+.login input:focus {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}
+
+.login button:active,
+.login input:active,
+.login a[href]:active {
+  opacity: 0.6;
+}
+
+.login__btn:hover,
+.login__btn:focus {
+  outline: 2px solid $light-brown;
+  outline-offset: 2px;
+}

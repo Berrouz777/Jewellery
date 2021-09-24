@@ -1,0 +1,50 @@
+.nav {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 24px 0 8px 0;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: none;
+    max-width: 100%;
+    margin: 0;
+    padding: 96px 0 55px 0;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 86px 0 25px 0;
+  }
+
+  &--menu {
+    @media (max-width: $desktop-breakpoint) {
+      display: block;
+    }
+  }
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: $desktop-breakpoint) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.nav--js {
+  @media (max-width: $desktop-breakpoint) {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding-left: 45px;
+    background-color: $light-brown;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-left: 15px;
+  }
+}
