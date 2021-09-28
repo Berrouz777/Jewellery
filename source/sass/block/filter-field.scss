@@ -60,6 +60,10 @@
     font-size: 18px;
     line-height: 23px;
   }
+
+  & > * {
+    pointer-events: none;
+  }
 }
 
 .filter-field__toggle:hover,

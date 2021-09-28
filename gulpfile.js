@@ -60,8 +60,7 @@ gulp.task('images', function () {
         imageminmozjpeg({
           quality: 75,
           progressive: true,
-        }),
-        imagemin.svgo()
+        })
       ]))
       .pipe(gulp.dest('build/img'));
 

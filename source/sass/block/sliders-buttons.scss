@@ -49,6 +49,7 @@
   width: 37px;
   height: 12px;
   stroke: $light-brown;
+  stroke-width: 2px;
 
   @media (max-width: $desktop-breakpoint) {
     height: 17px;

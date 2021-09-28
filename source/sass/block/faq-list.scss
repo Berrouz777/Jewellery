@@ -10,6 +10,7 @@
   line-height: 23px;
   font-weight: 500;
   color: $black-dif;
+  z-index: 1;
 
   @media (max-width: $tablet-breakpoint) {
     font-family: "Poppins", "Arial", sans-serif;
@@ -31,6 +32,7 @@
   margin: 0;
   padding: 45px 48px 43px 45px;
   cursor: pointer;
+  // outline: 1px solid red;
 
   &:hover {
     color: $light-brown;
@@ -61,6 +63,7 @@
 .faq-list__button span {
   max-width: 70%;
   text-align: left;
+  pointer-events: none;
 
   @media (max-width: $tablet-breakpoint) {
     max-width: 87%;
@@ -73,6 +76,7 @@
   margin-top: 6px;
   fill: none;
   stroke: $light-brown;
+  pointer-events: none;
 
   @media (max-width: $desktop-breakpoint) {
     width: 23px;
@@ -106,6 +110,7 @@
   padding: 0;
   margin-top: 0;
   margin-bottom: 20px;
+  cursor: default;
 
   @media (max-width: $desktop-breakpoint) {
     margin-bottom: 10px;

@@ -1,8 +1,6 @@
 'use strict';
 
-var accordionToggles = document.querySelectorAll('.faq-list__button');
-var accordionQuestions = document.querySelectorAll('.faq-list__question');
-var accordionAnswers = document.querySelectorAll('.faq-list__answer');
+var accordionBlock = document.querySelector('.faq-list');
 var CLOSED_QUESTION_CLASS = 'faq-list__question--closed';
 var CLOSED_ANSWER_CLASS = 'faq-list__answer--closed';
 
@@ -14,25 +12,32 @@ var getClosedClass = function getClosedClass(block, blockClass) {
   }
 };
 
-getClosedClass(accordionAnswers, CLOSED_ANSWER_CLASS);
-getClosedClass(accordionQuestions, CLOSED_QUESTION_CLASS);
-
-if (accordionToggles) {
-  accordionToggles.forEach(function (toggle) {
-    toggle.addEventListener('click', function (evt) {
-      var parentQuestion = evt.target.parentNode;
-      parentQuestion.classList.toggle(CLOSED_QUESTION_CLASS);
-      var answer = parentQuestion.nextElementSibling;
-      answer.classList.toggle(CLOSED_ANSWER_CLASS);
-      var currentQuestions = document.querySelectorAll('.faq-list__question');
-      currentQuestions.forEach(function (element) {
-        if (parentQuestion !== element && !element.classList.contains(CLOSED_QUESTION_CLASS)) {
-          element.classList.toggle(CLOSED_QUESTION_CLASS);
-          element.nextElementSibling.classList.toggle(CLOSED_ANSWER_CLASS);
-        }
-      });
-    });
+var toggleAccordionClickHandler = function toggleAccordionClickHandler(evt) {
+  var parentQuestion = evt.target.parentNode;
+  parentQuestion.classList.toggle(CLOSED_QUESTION_CLASS);
+  var answer = parentQuestion.nextElementSibling;
+  answer.classList.toggle(CLOSED_ANSWER_CLASS);
+  var currentQuestions = document.querySelectorAll('.faq-list__question');
+  currentQuestions.forEach(function (element) {
+    if (parentQuestion !== element && !element.classList.contains(CLOSED_QUESTION_CLASS)) {
+      element.classList.toggle(CLOSED_QUESTION_CLASS);
+      element.nextElementSibling.classList.toggle(CLOSED_ANSWER_CLASS);
+    }
   });
+};
+
+if (accordionBlock) {
+  var accordionToggles = document.querySelectorAll('.faq-list__button');
+  var accordionQuestions = document.querySelectorAll('.faq-list__question');
+  var accordionAnswers = document.querySelectorAll('.faq-list__answer');
+  getClosedClass(accordionAnswers, CLOSED_ANSWER_CLASS);
+  getClosedClass(accordionQuestions, CLOSED_QUESTION_CLASS);
+
+  if (accordionToggles) {
+    accordionToggles.forEach(function (toggle) {
+      toggle.addEventListener('click', toggleAccordionClickHandler);
+    });
+  }
 }
 /* eslint-disable no-unused-vars */
 'use strict';
@@ -142,16 +147,35 @@ var search = document.querySelector('.search');
 var cart = document.querySelector('.cart');
 var nav = document.querySelector('.nav');
 
+var burgerMenuClickHandler = function burgerMenuClickHandler() {
+  if (burgerButton) {
+    burgerButton.classList.toggle('header__burger-menu--menu');
+  }
+
+  if (header) {
+    header.classList.toggle('header--menu');
+  }
+
+  if (logo) {
+    logo.classList.toggle('header__logo--menu');
+  }
+
+  if (nav) {
+    nav.classList.toggle('nav--menu');
+  }
+
+  if (search) {
+    search.classList.toggle('search--menu');
+  }
+
+  if (cart) {
+    cart.classList.toggle('cart--menu');
+  }
+};
+
 if (burgerButton) {
   burgerButton.classList.toggle('header__burger-menu--js');
-  burgerButton.addEventListener('click', function () {
-    burgerButton.classList.toggle('header__burger-menu--menu');
-    header.classList.toggle('header--menu');
-    logo.classList.toggle('header__logo--menu');
-    nav.classList.toggle('nav--menu');
-    search.classList.toggle('search--menu');
-    cart.classList.toggle('cart--menu');
-  });
+  burgerButton.addEventListener('click', burgerMenuClickHandler);
 }
 
 if (nav) {
@@ -256,6 +280,7 @@ var currentDotOut = document.querySelector('.sliders-pagination-mobile__current'
 var totalDotsOut = document.querySelector('.sliders-pagination-mobile__total');
 var swiper;
 var ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
+var BREAKPOINT_MOBILE = 767;
 
 var initSwiper = function initSwiper() {
   swiper = new window.Swiper('.swiper-main', {
@@ -337,7 +362,7 @@ var setMobilePagination = function setMobilePagination() {
 var breakpointChangeHandler = function breakpointChangeHandler() {
   var viewport = document.documentElement.clientWidth;
 
-  if (viewport < 767) {
+  if (viewport < BREAKPOINT_MOBILE) {
     setMobilePagination();
   }
 };

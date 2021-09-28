@@ -75,7 +75,7 @@
   color: #1d1613;
   opacity: 0.5;
 
-  @at-root button#{&} {
+  button#{&} {
     border: none;
     margin: 0;
     padding: 0;
@@ -88,7 +88,7 @@
   }
 
   &:only-child {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -100,7 +100,7 @@
 .swiper-pagination-vertical.swiper-pagination-bullets {
   right: 10px;
   top: 50%;
-  transform: translate3d(0px, -50%, 0);
+  transform: translate3d(0, -50%, 0);
 
   .swiper-pagination-bullet {
     margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
@@ -118,6 +118,7 @@
     }
   }
 }
+
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-horizontal.swiper-pagination-bullets {
   .swiper-pagination-bullet {
@@ -134,6 +135,7 @@
     }
   }
 }
+
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   transition: 200ms transform, 200ms right;
 }
@@ -152,9 +154,11 @@
     transform: scale(0);
     transform-origin: left top;
   }
+
   .swiper-rtl & .swiper-pagination-progressbar-fill {
     transform-origin: right top;
   }
+
   .swiper-horizontal > &,
   &.swiper-pagination-horizontal,
   .swiper-vertical > &.swiper-pagination-progressbar-opposite,
@@ -164,6 +168,7 @@
     left: 0;
     top: 0;
   }
+
   .swiper-vertical > &,
   &.swiper-pagination-vertical,
   .swiper-horizontal > &.swiper-pagination-progressbar-opposite,

@@ -7,6 +7,7 @@ let totalDotsOut = document.querySelector('.sliders-pagination-mobile__total');
 let swiper;
 
 const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
+const BREAKPOINT_MOBILE = 767;
 
 let initSwiper = () => {
   swiper = new window.Swiper('.swiper-main', {
@@ -86,7 +87,7 @@ let setMobilePagination = () => {
 
 let breakpointChangeHandler = () => {
   let viewport = document.documentElement.clientWidth;
-  if (viewport < 767) {
+  if (viewport < BREAKPOINT_MOBILE) {
     setMobilePagination();
   }
 };
