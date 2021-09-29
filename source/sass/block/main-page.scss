@@ -1,0 +1,50 @@
+.main-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media(max-width: $tablet-breakpoint) {
+    justify-content: space-around;
+  }
+}
+
+.main-page div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 45%;
+  background-color: $extra-light-grey;
+  border: 2px solid rgba($light-brown, 0.5);
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+  @media(max-width: $tablet-breakpoint) {
+    min-height: 120px;
+    margin-bottom: 70px;
+  }
+}
+
+.main-page a {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $black-dif;
+  text-decoration: none;
+  border-bottom: 2px solid $light-brown;
+
+  &:hover {
+    color: $light-brown;
+    border-bottom: 2px dotted $light-brown;
+  }
+
+  &:focus {
+    outline: 2px solid $light-brown;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
