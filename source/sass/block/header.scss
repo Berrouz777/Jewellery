@@ -92,6 +92,8 @@
 .header--menu {
   @media (max-width: $desktop-breakpoint) {
     position: relative;
+    // z-index: 1;
+    // width: 100%;
     background-color: $light-brown;
   }
 }

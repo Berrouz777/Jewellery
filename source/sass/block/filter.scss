@@ -127,8 +127,8 @@
 .filter--opened {
   @media (max-width: $desktop-breakpoint) {
     display: block;
-    position: absolute;
-    top: -20px;
+    position: fixed;
+    top: 150px;
     left: 50%;
     z-index: 2;
     transform: translateX(-50%);

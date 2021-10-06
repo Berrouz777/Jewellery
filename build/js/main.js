@@ -102,6 +102,7 @@ if (accordionFilterBlock) {
 var filterBlock = document.querySelector('.filter');
 var closeFilterButton = document.querySelector('.filter__close');
 var openFilterButton = document.querySelector('.catalog__filter-link');
+var page = document.querySelector('.body');
 
 var escapeFilterHandler = function escapeFilterHandler(evt) {
   if (evt.code === 'Escape') {
@@ -120,6 +121,7 @@ var changeStateFilter = function changeStateFilter() {
     closeFilterButton.removeEventListener('click', closeFilterButtonHandler);
   } else {
     closeFilterButton.addEventListener('click', closeFilterButtonHandler);
+    page.classList.toggle('body--overflow');
   }
 
   filterBlock.classList.toggle('filter--opened');
@@ -128,6 +130,7 @@ var changeStateFilter = function changeStateFilter() {
 var closeFilterButtonHandler = function closeFilterButtonHandler() {
   filterBlock.classList.toggle('filter--opened');
   closeFilterButton.removeEventListener('click', closeFilterButtonHandler);
+  page.classList.toggle('body--overflow');
 };
 
 var initFilter = function initFilter() {

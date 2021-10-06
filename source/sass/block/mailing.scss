@@ -1,6 +1,8 @@
 .mailing {
   width: 42%;
-  padding: 0 84px 0 15px;
+  padding: 0 14px 0 15px;
+  // outline: 1px solid red;
+  margin-right: auto;
 
   @media (max-width: $desktop-breakpoint) {
     width: 100%;

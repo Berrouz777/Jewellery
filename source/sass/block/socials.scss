@@ -5,6 +5,7 @@
   width: 123px;
   margin: 0 0 10px auto;
   padding: 2px 15px 0 0;
+  // outline: 1px solid red;
 
   @media (max-width: $desktop-breakpoint) {
     margin: 0 0 10px -5px;
